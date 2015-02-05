@@ -1,7 +1,7 @@
 var fs = require('fs');
 var shp2stl = require('shp2stl');
 
-var file = 'douglas100f_polys_900913.shp';
+var file = 'douglas500fpoly.shp';
 
 shp2stl.shp2stl(file,
     {
@@ -9,13 +9,13 @@ shp2stl.shp2stl(file,
         height: 10,
         extraBaseHeight: 0,
         extrudeBy: "ELEV",
-        simplification: .6,
+        simplification: .8,
         binary: false,
         cutoutHoles: false,
         verbose: true,
         extrusionMode: 'straight'
     },
     function(err, stl) {
-        fs.writeFileSync('douglas100f.stl',  stl);
+        fs.writeFileSync('douglas500fpoly.stl',  stl);
     }
 );
