@@ -1,7 +1,7 @@
 var fs = require('fs');
 var shp2stl = require('shp2stl');
 
-var file = 'douglas100f.shp';
+var file = 'douglas100f_polys_900913.shp';
 
 shp2stl.shp2stl(file,
     {
@@ -9,7 +9,7 @@ shp2stl.shp2stl(file,
         height: 10,
         extraBaseHeight: 0,
         extrudeBy: "ELEV",
-        simplification: .8,
+        simplification: .6,
         binary: false,
         cutoutHoles: false,
         verbose: true,
